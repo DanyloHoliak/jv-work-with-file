@@ -9,10 +9,12 @@ import java.io.IOException;
 public class WorkWithFile {
     private static final String const1 = "supply";
     private static final String const2 = "buy";
+
     public void getStatistic(String fromFileName, String toFileName) {
         int[] statistics = readStatistics(fromFileName);
         writeReport(toFileName, statistics);
     }
+
     private static int[] readStatistics(String fromFileName) {
         int supplySum = 0;
         int buySum = 0;
@@ -32,6 +34,7 @@ public class WorkWithFile {
         }
         return new int[]{supplySum,buySum};
     }
+
     private static void writeReport(String toFileName, int[] statistics) {
         int supplySum = statistics[0];
         int buySum = statistics[1];
